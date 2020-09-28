@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_reply_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reply Received"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_reply"
+        android:layout_below="@id/tv_reply_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="message"
+        android:visibility="invisible"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="SEND"
+        android:onClick="launchSecondActivity"/>
+
+    <EditText
+        android:id="@+id/et_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@id/btn_send"
+        android:layout_toLeftOf="@+id/btn_send"
+        android:hint="@string/enter_message" />
+
+</RelativeLayout>
